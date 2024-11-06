@@ -35,7 +35,15 @@
 
 <body class="index-page">
 
-    <iframe src="header.html"></iframe>
+    <div id="header"></div>
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+    </script>
+
   <main class="main">
 
     <!-- Hero Section -->
@@ -380,7 +388,15 @@
 
   </main>
 
-  <iframe src="footer.html"></iframe>
+  <div id="footer"></div>
+    <script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
